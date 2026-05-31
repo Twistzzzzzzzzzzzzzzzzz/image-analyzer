@@ -1,6 +1,17 @@
 ---
 name: image-analyzer
-description: Analyze image content including screenshots, UI designs, charts, photos, and extract text via OCR. Use this skill whenever the user asks to analyze an image, look at a screenshot, review a UI, interpret a chart or diagram, extract text from an image, describe a photo, or when the user attaches or references any image file (.png, .jpg, .gif, .webp, .bmp). Triggers on phrases like "看看这个图", "分析这张截图", "这张照片里有什么", "帮我识别图片", "提取图片里的文字", "这个图表什么意思", "review this UI", "what's in this image". Also triggers when user shares an image path for any reason.
+description: |
+  Analyze and describe image content with structured output templates. MUST use this skill whenever the user:
+  - Asks about any image, screenshot, photo, picture, chart, diagram, or UI mockup
+  - Wants to know "what's in this image" or "what does this picture show"
+  - Shares a file path ending in .png .jpg .jpeg .gif .webp .bmp .svg
+  - Says anything like "看看这个图", "分析这张截图", "这张照片里有什么", "帮我识别图片", "提取图片里的文字", "这个图表什么意思", "看看这个界面", "这个设计怎么样", "图片上写了什么", "这张图说明了什么", "review this UI", "what's in this screenshot", "analyze this chart", "extract text from this image", "describe this photo", "tell me about this picture"
+  - Shares a screenshot for debugging or review purposes
+  - Wants OCR / text extraction from any image
+  - Reviews UI designs, evaluates layout, or checks visual design quality
+  - Interprets data visualizations, flowcharts, architecture diagrams, or mind maps
+  
+  Do NOT skip this skill when the user mentions any image file or asks to "look at" something visual — even if the request seems simple. Always use the structured templates for consistent, professional output.
 ---
 
 # Image Analyzer
